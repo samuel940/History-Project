@@ -293,7 +293,7 @@ function draw() {
       text("press space to confirm", width/2 - 100, height*(6.5/10));
       if (keyDown(RIGHT_ARROW)) {
         amount = amount + 1;
-    } else if(keyDown(LEFT_ARROW && amount - 1>  0)) {
+    } else if(keyDown(LEFT_ARROW && amount - 1>=  0)) {
       amount = amount - 1;
     }
     
@@ -381,7 +381,7 @@ function draw() {
     text('Dice Roll: ' + diceRoll,width/2 - 100, height*(9/10));
     textTime = textTime - 1;
   }
-  if(health === 0) {
+  if(health <= 0) {
     textSize(30);
     fill('white');
     stroke('black');
@@ -595,7 +595,7 @@ function buyFood() {
   text("Press space to Confirm" ,width*(5/10) - 50,height*(6.5/10));
   if (keyDown(RIGHT_ARROW)) {
       amount = amount + 1;
-  } else if(keyDown(LEFT_ARROW && amount - 1 > 0)) {
+  } else if(keyDown(LEFT_ARROW && amount - 1 >= 0)) {
     amount = amount - 1;
   }
   if (keyWentDown("space")){
@@ -621,7 +621,7 @@ function buyOx(){
   text("Press space to Confirm" ,width*(5/10) - 50,height*(6.5/10));
   if (keyDown(RIGHT_ARROW)) {
       amount = amount + 1;
-  } else if(keyDown(LEFT_ARROW && amount - 1 > 0)) {
+  } else if(keyDown(LEFT_ARROW && amount - 1 >= 0)) {
     amount = amount - 1;
   }
   if (keyWentDown("space")){
@@ -647,7 +647,7 @@ function buyAmmunition() {
   text("Press space to Confirm" ,width*(5/10) - 50,height*(6.5/10));
   if (keyDown(RIGHT_ARROW)) {
       amount = amount + 1;
-  } else if(keyDown(LEFT_ARROW && amount - 1 > 0)) {
+  } else if(keyDown(LEFT_ARROW && amount - 1 >= 0)) {
     amount = amount - 1;
   }
   if (keyWentDown("space")){
@@ -673,7 +673,7 @@ function buySpareParts(){
   text("Press space to Confirm" ,width*(5/10) - 50,height*(6.5/10));
   if (keyDown(RIGHT_ARROW)) {
       amount = amount + 1;
-  } else if(keyDown(LEFT_ARROW && amount - 1 > 0)) {
+  } else if(keyDown(LEFT_ARROW && amount - 1 >= 0)) {
     amount = amount - 1;
   }
   if (keyWentDown("space")){
